@@ -1,6 +1,7 @@
 
 import { Card } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import LinkedinFooter from "./LinkedinFooter";
 
 const MyHomePage = () => {
     const [profile, setProfile] = useState(null)
@@ -34,7 +35,7 @@ const MyHomePage = () => {
         };
 
     return (
-            <>
+            <div className="container">
             {profile && (
               <Card>
                 <Card.Img variant="top" src={profile.image} />
@@ -54,7 +55,8 @@ const MyHomePage = () => {
                 </Card.Body>
               </Card>
               )}
-            </>
+              
+            </div>
     );
 }
 export default MyHomePage;
