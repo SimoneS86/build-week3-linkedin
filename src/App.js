@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LinkedinFooter from './Components/LinkedinFooter'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LinkedinFooter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

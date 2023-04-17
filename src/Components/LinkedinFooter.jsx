@@ -7,13 +7,13 @@ const LinkedinFooter = () => {
       <section className="">
         <Container className="text-center text-md-start mt-5">
           <Row className="mt-3">
-            <Col md={2} lg={2} xl={2} className="mb-4">
+            <Col md={2} lg={3} xl={2} className="mb-4">
               <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Informazioni
                 </Link>
               </p>
-              <p className="mb-0">
+              <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Linee guida della community
                 </Link>
@@ -42,9 +42,19 @@ const LinkedinFooter = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Sales Solutions
+                </Link>
+              </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Centro sicurezza
+                </Link>
+              </p>
             </Col>
 
-            <Col md={2} lg={2} xl={2} className="mb-4">
+            <Col md={2} lg={3} xl={2} className="mb-4">
               <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Accessibilità
@@ -60,9 +70,14 @@ const LinkedinFooter = () => {
                   Opzioni per gli annunci pubblicitari
                 </Link>
               </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Mobile
+                </Link>
+              </p>
             </Col>
 
-            <Col md={2} lg={2} xl={2} className="mb-4">
+            <Col md={2} lg={3} xl={2} className="mb-4">
               <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Talent Solutions
@@ -76,6 +91,11 @@ const LinkedinFooter = () => {
               <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Pubblicità
+                </Link>
+              </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Piccole imprese
                 </Link>
               </p>
             </Col>
@@ -147,34 +167,6 @@ const LinkedinFooter = () => {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </p>
-            </Col>
-          </Row>
-          <Row className="mt-1">
-            <Col md={2} lg={2} xl={2} className=" mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Sales Solutions
-                </Link>
-              </p>
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Centro sicurezza
-                </Link>
-              </p>
-            </Col>
-            <Col md={2} lg={2} xl={2} className="mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Mobile
-                </Link>
-              </p>
-            </Col>
-            <Col md={2} lg={2} xl={2} className="mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Piccole imprese
-                </Link>
               </p>
             </Col>
           </Row>
