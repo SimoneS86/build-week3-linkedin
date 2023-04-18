@@ -7,7 +7,7 @@ import TopNav from './Components/TopNav';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App sfondo">
       <BrowserRouter>
       <TopNav />
       <Routes>

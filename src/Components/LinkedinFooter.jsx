@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const LinkedinFooter = () => {
   return (
-    <footer className="bg-light text-center text-lg-start text-muted">
+    <footer className="bg-none text-center text-lg-start text-muted">
       <section className="">
-        <Container className="text-center text-md-start mt-5">
+        <Container className="text-center text-md-start ">
           <Row className="mt-3">
             <Col md={2} lg={2} xl={2} className="mb-4">
               <p>
@@ -21,7 +21,7 @@ const LinkedinFooter = () => {
               <div>
                 <Dropdown className="text-reset">
                   <Dropdown.Toggle
-                    className="p-0"
+                    className="px-0"
                     variant="none"
                     id="dropdown-basic"
                   >
@@ -42,6 +42,16 @@ const LinkedinFooter = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Sales Solutions
+                </Link>
+              </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Centro sicurezza
+                </Link>
+              </p>
             </Col>
 
             <Col md={2} lg={2} xl={2} className="mb-4">
@@ -60,6 +70,11 @@ const LinkedinFooter = () => {
                   Opzioni per gli annunci pubblicitari
                 </Link>
               </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Mobile
+                </Link>
+              </p>
             </Col>
 
             <Col md={2} lg={2} xl={2} className="mb-4">
@@ -76,6 +91,11 @@ const LinkedinFooter = () => {
               <p>
                 <Link to="/" className="text-reset text-decoration-none">
                   Pubblicità
+                </Link>
+              </p>
+              <p>
+                <Link to="/" className="text-reset text-decoration-none">
+                  Piccole imprese
                 </Link>
               </p>
             </Col>
@@ -150,34 +170,6 @@ const LinkedinFooter = () => {
               </div>
             </Col>
           </Row>
-          <Row className="mt-1">
-            <Col md={2} lg={2} xl={2} className=" mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Sales Solutions
-                </Link>
-              </p>
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Centro sicurezza
-                </Link>
-              </p>
-            </Col>
-            <Col md={2} lg={2} xl={2} className="mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Mobile
-                </Link>
-              </p>
-            </Col>
-            <Col md={2} lg={2} xl={2} className="mb-4">
-              <p>
-                <Link to="/" className="text-reset text-decoration-none">
-                  Piccole imprese
-                </Link>
-              </p>
-            </Col>
-          </Row>
         </Container>
       </section>
 
@@ -186,4 +178,4 @@ const LinkedinFooter = () => {
   );
 };
 
-export default LinkedinFooter;
+export default LinkedinFooter
