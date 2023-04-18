@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <TopNav/>
+      <TopNav />
       <Routes>
-        <Route path="/" element={<MyHomePage/>}/>
+        <Route path="/" element={<MyHomePage prop="5fc4af46b708c200175de88f"/>}/>
       </Routes>
       <LinkedinFooter/>
       </BrowserRouter>
