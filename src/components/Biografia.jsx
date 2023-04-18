@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 const Biografia = () => {
   return (
     <>
-      <Card className="mt-3 mb-3 bg-dark text-light">
+      <Card className="mt-3 mb-3 bg-white text-dark ">
         <Card.Body className="position-relative">
           <Button style={{ right: "0px", top: "0px" }} variant="outline-secondary border-0 py-1 px-2 position-absolute">
             Modifica
