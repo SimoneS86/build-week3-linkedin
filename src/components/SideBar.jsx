@@ -49,6 +49,20 @@ function Sidebar() {
                 Collegati
               </Button>
             </Col>
+            <Button variant="outline-secondary" className=" fw-bold mt-3 mb-3">
+              Viasualizza altro
+            </Button>
+
+            <Col md={3} className="mt-3">
+              <Image src="https://via.placeholder.com/50x50.png?text=Placeholder" roundedCircle />
+            </Col>
+            <Col md={9}>
+              <h5>Giuseppe Canzoneri</h5>
+              <p>Junior Full-Stack-Developer</p>
+              <Button className="mb-3" variant="outline-secondary  ">
+                Collegati
+              </Button>
+            </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3">
               Viasualizza altro
             </Button>
