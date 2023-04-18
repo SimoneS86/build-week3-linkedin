@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
       <TopNav />
       <Routes>
-        <Route path="/" element={<MyHomePage prop="5fc4af46b708c200175de88f"/>}/>
+        <Route path="/" element={<MyHomePage prop="5fc4ae95b708c200175de88d"/>}/>
       </Routes>
       <LinkedinFooter/>
       </BrowserRouter>
