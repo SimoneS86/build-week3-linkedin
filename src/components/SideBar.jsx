@@ -1,5 +1,6 @@
 import { Card, Button, Row, Col, Image } from "react-bootstrap";
 import sidebarImg from "../assets/image/sidebar.png";
+import logo from "../assets/icons/Logo-nav.svg";
 
 function Sidebar() {
   return (
@@ -14,9 +15,7 @@ function Sidebar() {
       </Card>
 
       <Card className="mt-2 text-center">
-        <Card.Body>
-          <img src={sidebarImg} alt="sidebarImg" />
-        </Card.Body>
+        <img src={sidebarImg} alt="sidebarImg" />
       </Card>
 
       <Card className="mt-2">
@@ -43,13 +42,59 @@ function Sidebar() {
             <Col md={3} className="mt-3">
               <Image src="https://via.placeholder.com/50x50.png?text=Placeholder" roundedCircle />
             </Col>
-            <Col md={9} className="mt-3">
+            <Col md={9}>
               <h5>Salvatore Mercurio</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
                 Collegati
               </Button>
             </Col>
+            <Button variant="outline-secondary" className=" fw-bold mt-3">
+              Viasualizza altro
+            </Button>
+          </Row>
+        </Card.Body>
+      </Card>
+
+      <Card className="mt-2">
+        <Card.Body>
+          <Card.Text className="fw-bold text-secondary">
+            {" "}
+            <Image src={logo} style={{ height: 30, width: 20 }} />
+            IN LEARNING
+          </Card.Text>
+          <Card.Text className="text-dark "> Aggiungi Nuove competenze con questi corsi, gratuiti per 24 ore</Card.Text>
+          <Row>
+            <Col md={3}>
+              <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
+            </Col>
+            <Col md={9}>
+              <h5>Fondamenti di programmazione...</h5>
+            </Col>
+          </Row>
+          <hr />
+
+          <Row>
+            <Col md={3}>
+              <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
+            </Col>
+            <Col md={9}>
+              <h5>Impara Python</h5>
+            </Col>
+          </Row>
+
+          <hr />
+
+          <Row>
+            <Col md={3}>
+              <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
+            </Col>
+            <Col md={9}>
+              <h5>Python per non programmatori</h5>
+            </Col>
+            <Button variant="outline-secondary" className=" fw-bold mt-3">
+              Viasualizza i miei suggerimenti
+            </Button>
           </Row>
         </Card.Body>
       </Card>
