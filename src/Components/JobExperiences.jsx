@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import { Link } from 'react-router-dom'
 
 const JobExperiences = () => {
@@ -57,6 +57,7 @@ const JobExperiences = () => {
   // };
 
   return (
+    <Container>
     <Card>
       <div className="d-flex justify-content-between">
         <Card.Title>Esperienza</Card.Title>
@@ -106,9 +107,11 @@ const JobExperiences = () => {
                 <p>{experience.description}</p>
             </li>
         </ul>
+        <hr className='border border-dark'/>
       </Card.Body>
       ))}
     </Card>
+    </Container>
   )
 }
 
