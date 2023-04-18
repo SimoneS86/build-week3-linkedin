@@ -18,7 +18,7 @@ const TopNav = () => {
               <img src={logo} alt="" />
             </div>
 
-            <Form inline className="search-position">
+            <Form className="search-position">
               <FormControl type="text" placeholder="Search" className="mr-sm-2 search-input" />
             </Form>
           </div>
