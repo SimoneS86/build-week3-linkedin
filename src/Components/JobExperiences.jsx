@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
-const JobExperiences = (userId) => {
+const JobExperiences = () => {
   const [experiences, setExperiences] = useState(null);
-  const endpoint = `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences`;
+  const endpoint = `https://striveschool-api.herokuapp.com/api/profile/643d01c1186a8700143867c7/experiences`;
   const fetchOpt = {
     headers: {
       Authorization:
@@ -30,41 +31,41 @@ const JobExperiences = (userId) => {
     }
   };
 
-  const setExperience = async () => {
-    const newExperience = {
-      role:
-      company:
-      startDate:
-      endDate:
-      description:
-      area:
-    }
-    try {
-      const resp = await fetch(endpoint, {
-        method: "put",
-        headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMDFjMTE4NmE4NzAwMTQzODY3YzciLCJpYXQiOjE2ODE3MTk3NDUsImV4cCI6MTY4MjkyOTM0NX0.1Tn5npc1g9BA27ycQpbJRwnJsC-4qnA5lcoubLF6Br0",
-          "Content-Type": "application/json",
-          "x-access-token": "token-value",
-        },
-        body: JSON.stringify(newExperience),
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const setExperience = async () => {
+  //   const newExperience = {
+  //     role: 
+  //     company: 
+  //     startDate:
+  //     endDate:
+  //     description:
+  //     area:
+  //   }
+  //   try {
+  //     const resp = await fetch(endpoint, {
+  //       method: "POST",
+  //       headers: {
+  //         Authorization:
+  //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMDFjMTE4NmE4NzAwMTQzODY3YzciLCJpYXQiOjE2ODE3MTk3NDUsImV4cCI6MTY4MjkyOTM0NX0.1Tn5npc1g9BA27ycQpbJRwnJsC-4qnA5lcoubLF6Br0",
+  //         "Content-Type": "application/json",
+  //         "x-access-token": "token-value",
+  //       },
+  //       body: JSON.stringify(newExperience),
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <Card>
-      <div>
+      <div className="d-flex justify-content-between">
         <Card.Title>Esperienza</Card.Title>
         <div>
           <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="50"
+              height="50"
               fill="currentColor"
               class="bi bi-plus"
               viewBox="0 0 16 16"
@@ -76,8 +77,8 @@ const JobExperiences = (userId) => {
           <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="50"
+              height="50"
               fill="currentColor"
               class="bi bi-pencil-fill"
               viewBox="0 0 16 16"
@@ -88,7 +89,8 @@ const JobExperiences = (userId) => {
           </Link>
         </div>
       </div>
-      {experiences.map((experience, i) =>
+      {experiences && (
+      experiences.map((experience, i) =>
       <Card.Body key={i}>
         <div className="d-flex">
           <Card.Img src={experience.image} style={{ width: 10, heigth: 10 }} />
@@ -105,7 +107,7 @@ const JobExperiences = (userId) => {
             </li>
         </ul>
       </Card.Body>
-      )}
+      ))}
     </Card>
   )
 }
