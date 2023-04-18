@@ -31,6 +31,14 @@ const JobExperiences = (userId) => {
   };
 
   const setExperience = async () => {
+    const newExperience = {
+      role:
+      company:
+      startDate:
+      endDate:
+      description:
+      area:
+    }
     try {
       const resp = await fetch(endpoint, {
         method: "put",
@@ -40,7 +48,7 @@ const JobExperiences = (userId) => {
           "Content-Type": "application/json",
           "x-access-token": "token-value",
         },
-        body: JSON.stringify(),
+        body: JSON.stringify(newExperience),
       });
     } catch (error) {
       console.log(error);
