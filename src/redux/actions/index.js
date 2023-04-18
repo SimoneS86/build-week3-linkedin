@@ -1,8 +1,8 @@
 export const ADD_PROFILE = "ADD_PROFILE";
 
-export const getProfileAction = () => {
+export const getProfileAction = (prop) => {
   return async (dispatch) => {
-    const endpoint = "https://striveschool-api.herokuapp.com/api/profile/5fc4af46b708c200175de88f";
+    const endpoint = "https://striveschool-api.herokuapp.com/api/profile/" + prop.prop;
     const fetchOpt = {
       headers: {
         Authorization:
