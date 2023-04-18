@@ -50,7 +50,9 @@
   height: 24px;
 }
 
+/* PADDING AGGIUNTO */
 .menu-size {
+  padding-top: 25px;
   width: 90px;
   height: 53px;
   display: flex;
@@ -66,9 +68,6 @@
 .dropdown-toggle {
   padding: 0 !important;
 }
-/* color: #fff; */
-/* background-color: #007bff; */
-/* border-color: #007bff; */
 
 .nav-li-icon {
   color: var(--linkedin-dark-blue);
@@ -79,8 +78,10 @@
   color: var(--linkedin-grey);
 }
 
+/* CAMBIAMENTO PADDING */
 .logo-mini {
   width: 40px;
+  padding-top: 12.5px;
 }
 .logo-mini img {
   width: 35px;
@@ -96,12 +97,13 @@
   outline: none !important;
 }
 
+/* PADDING AGGIUNTO */
 .search-position {
+  padding-top: 14px;
   position: relative;
 }
 
 .nav-menu-icon {
-  width: 24px;
   filter: brightness(2.2);
 }
 

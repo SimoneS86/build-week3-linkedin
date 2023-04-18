@@ -7,8 +7,11 @@ import jobs from "../assets/icons/work.svg";
 import message from "../assets/icons/messages.svg";
 import notification from "../assets/icons/notifications.svg";
 import more from "../assets/icons/more.svg";
+import { useSelector } from "react-redux";
 
 const TopNav = () => {
+  const profile = useSelector(state => state.profile.content);
+
   return (
     <Navbar expand="lg" className="navbar-main">
       <Container className="px-0">
@@ -69,19 +72,16 @@ const TopNav = () => {
                 </Nav.Link>
 
                 <div className="profile-drop-down menu-size">
-                  <img src={"https://via.placeholder.com/20x20.png?text=Placeholder"} alt="" className="profile-icon" />
-                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name">
+                  <img src={profile && profile.image} alt="" className="profile-icon" />
+                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name mt-3">
+                    {/* PADDING AGGIUNTO */}
                     <NavDropdown.Item className="dropdown-main-action d-flex align-items-center">
                       <span>
-                        <img
-                          src={"https://via.placeholder.com/20x20.png?text=Placeholder"}
-                          alt=""
-                          className="profile-icon2 mr-2"
-                        />
+                        <img src={profile && profile.image} alt="" className="profile-icon2 mr-2" />
                       </span>
                       <div style={{ color: "black" }}>
-                        <p className="fs-16 fw-700">Giuseppe Canzoneri</p>
-                        <p className="fs-14 ">Giuseppe</p>
+                        <p className="fs-16 fw-700">{profile && profile.name}</p>
+                        <p className="fs-14 ">{profile && profile.surname}</p>
                       </div>
                     </NavDropdown.Item>
                     <div
@@ -123,9 +123,10 @@ const TopNav = () => {
 
                 <div className="profile-drop-down menu-size work">
                   <img src={more} alt="" className="nav-menu-icon" />
-                  <NavDropdown title="Work" id="basic-nav-dropdown" className="profile-name "></NavDropdown>
+                  <NavDropdown title="Work" id="basic-nav-dropdown" className="profile-name mt-3"></NavDropdown>{" "}
+                  {/* PADDING AGGIUNTO */}
                 </div>
-                <Nav.Link href="#premium" className="text-align-center ">
+                <Nav.Link href="#premium" className="text-align-center mt-4 ">
                   <p className="fs-12 fw-700 premium">Network Smarter,</p>{" "}
                   <p className="fs-12 fw-700 premium">Try premium Free!</p>
                 </Nav.Link>
