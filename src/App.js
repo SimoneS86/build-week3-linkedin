@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
       <TopNav />
       <Routes>
-        <Route path="/" element={<MyProfilePage prop="643d132022a6ab00141a8567"/>}/>
-        <Route path="/profile/:userId/experiences" element={<JobExperiences prop="643d132022a6ab00141a8567"/>}/>
+        <Route path="/" element={<MyProfilePage prop="643d01c1186a8700143867c7"/>}/>
+        <Route path="/profile/:userId/experiences" element={<JobExperiences prop="643d01c1186a8700143867c7"/>}/>
       </Routes>
       <LinkedinFooter/>
       </BrowserRouter>
