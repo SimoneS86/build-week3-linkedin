@@ -1,56 +1,35 @@
-import { useState, useEffect } from "react";
-import { Card, Container, Button, Modal, Form } from "react-bootstrap";
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { Card, Container, Button, Form, Modal } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+import {getExperiencesAction} from "../redux/actions"
 
+const JobExperiences = (prop) => {
+    const experiences = useSelector((state) => state.experiences.content)
+    const dispatch = useDispatch();
+    const [showModal, setShowModal] = useState(false)
+    const [newExperience, setNewExperience] = useState({
+      role: "",
+      company: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      area: ""
+    });
 
+    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/`+ prop.prop +`/experiences`;
 
-const JobExperiences = () => {
-  const [experiences, setExperiences] = useState(null)
-  const [showModal, setShowModal] = useState(false)
-  const [newExperience, setNewExperience] = useState({
-    role: "",
-    company: "",
-    startDate: "",
-    endDate: "",
-    description: "",
-    area: ""
-  });
-
-  const endpoint = `https://striveschool-api.herokuapp.com/api/profile/643d01c1186a8700143867c7/experiences`;
-  const fetchOpt = {
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMDFjMTE4NmE4NzAwMTQzODY3YzciLCJpYXQiOjE2ODE3MTk3NDUsImV4cCI6MTY4MjkyOTM0NX0.1Tn5npc1g9BA27ycQpbJRwnJsC-4qnA5lcoubLF6Br0",
-    },
-  };
-
-  useEffect(() => {
-    getExperiences();
-  }, []);
-
-  const getExperiences = async () => {
-    try {
-      const resp = await fetch(endpoint, fetchOpt);
-      if (resp.ok) {
-        const dataExperiences = await resp.json();
-        console.log(dataExperiences);
-        setExperiences(dataExperiences);
-      } else {
-        alert("Errore qualcosa è andato storto");
-      }
-    } catch (error) {
-      console.log(error);
+    const openModal = () => {
+      setShowModal(true)
     }
-  }
-
-  const openModal = () => {
-    setShowModal(true)
-  }
-
-  const closeModal = () => {
-    setShowModal(false)
-  }
-
+  
+    const closeModal = () => {
+      setShowModal(false)
+    }
+ 
+  useEffect(() => {
+    dispatch(getExperiencesAction(prop));
+  }, []);
 
   const handleChange = (propertyName, propertyValue) => {
     setNewExperience({
@@ -69,7 +48,7 @@ const JobExperiences = () => {
         headers: {
             "Content-Type": "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMDFjMTE4NmE4NzAwMTQzODY3YzciLCJpYXQiOjE2ODE3MTk3NDUsImV4cCI6MTY4MjkyOTM0NX0.1Tn5npc1g9BA27ycQpbJRwnJsC-4qnA5lcoubLF6Br0"
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMTMyMDIyYTZhYjAwMTQxYTg1NjciLCJpYXQiOjE2ODE3MjQxOTIsImV4cCI6MTY4MjkzMzc5Mn0.x8dPST_iOah2_5aT7ZuitZWbm0q-dOuBjsrQ8N4_VJI"
         },
         body: JSON.stringify(newExperience)
       });
@@ -95,7 +74,7 @@ const JobExperiences = () => {
     <Container>
     <Card>
       <div className="d-flex justify-content-between">
-        <Card.Title><Link to="/">Esperienza</Link></Card.Title>
+        <Card.Title><Link to="/profile/:userId/experiences">Esperienza</Link></Card.Title>
         <div>
           <button className='border border-0' onClick={openModal}>
             <svg

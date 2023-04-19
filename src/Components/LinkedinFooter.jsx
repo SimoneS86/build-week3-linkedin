@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const LinkedinFooter = () => {
   return (
-    <footer className="bg-light text-center text-lg-start text-muted">
+    <footer className="bg-none text-center text-lg-start text-muted">
       <section className="">
-        <Container className="text-center text-md-start mt-5">
+        <Container className="text-center text-md-start ">
           <Row className="mt-3">
             <Col md={2} lg={2} xl={2} className="mb-4">
               <p>
