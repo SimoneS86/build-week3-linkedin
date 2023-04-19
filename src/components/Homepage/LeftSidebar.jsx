@@ -2,7 +2,6 @@ import premium from "../../assets/icons/Premium.svg";
 import items from "../../assets/icons/items.svg";
 import hashtag from "../../assets/icons/hashtag.svg";
 import { Col } from "react-bootstrap";
-import "./LeftSidebar.css";
 
 const LeftSidebar = props => {
   return (
