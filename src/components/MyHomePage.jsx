@@ -42,10 +42,7 @@ const MyHomePage = prop => {
                   width={150}
                   height={150}
                 />
-                <Button
-                  style={{ right: "10px", top: "0px" }}
-                  variant="outline-secondary border-0 py-2 position-absolute"
-                >
+                <Button style={{ right: "10px", top: "0px" }} variant="outline-light border-0 py-2 position-absolute">
                   <HiOutlinePencil className="text-secondary fs-4" />
                 </Button>
                 <Card.Title className="fs-4 mb-0">
@@ -73,7 +70,7 @@ const MyHomePage = prop => {
                     <Card.Body className="position-relative">
                       <Button
                         style={{ right: "0px", top: "0px" }}
-                        variant="outline-secondary border-0 py-1 px-2  position-absolute"
+                        variant="outline-light border-0 py-1 px-2  position-absolute"
                       >
                         <HiOutlinePencil className="text-secondary fs-4" />
                       </Button>
@@ -91,7 +88,7 @@ const MyHomePage = prop => {
               <Card.Body className="position-relative">
                 <Button
                   style={{ right: "0px", top: "0px" }}
-                  variant="outline-secondary border-0 py-1 px-2 position-absolute"
+                  variant="outline-light border-0 py-1 px-2 position-absolute"
                 >
                   <HiOutlinePencil className="text-secondary fs-4" />
                 </Button>

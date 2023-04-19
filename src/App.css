@@ -1,0 +1,57 @@
+.mainContainerPost {
+  background-color: var(--linkedin-white);
+  border-radius: 10px;
+  /* width: 550px; */
+  border: solid 1px var(--linkedin-white-grey);
+  /* height: 116px; */
+}
+.userPicturePost {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.userPostBtn {
+  margin-top: 10px;
+  border: 1px solid grey;
+  background-color: var(--linkedin-white);
+  height: 48px;
+  border-radius: 100px;
+  font-weight: bold;
+  color: var(--linkedin-dark-grey);
+  text-align: left;
+}
+.userPostBtn:hover {
+  background-color: rgb(240, 240, 240);
+}
+.userPostIcons {
+  justify-content: space-between;
+  align-items: center;
+}
+.share-box-feed {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+
+  /* border: none; */
+}
+.like-box-feed {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  /* border: none; */
+  align-items: center;
+  border-block-start: solid 1px var(--linkedin-white-grey);
+}
+.share-box-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--linkedin-white);
+}
+.share-box-btn:hover {
+  background-color: var(--linkedin-bg-off-white);
+}
+
+.width-hover {
+  width: 100px;
+}

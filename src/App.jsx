@@ -4,6 +4,7 @@ import "./App.css";
 import MyHomePage from "./Components/MyHomePage";
 import LinkedinFooter from "./Components/LinkedinFooter";
 import TopNav from "./Components/TopNav";
+import HomePage from "./Components/Homepage/HomePage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <TopNav />
         <Routes>
           <Route path="/" element={<MyHomePage prop="5fc4af46b708c200175de88f" />} />
+          <Route path="/home" element={<HomePage />} />
         </Routes>
         <LinkedinFooter />
       </BrowserRouter>
