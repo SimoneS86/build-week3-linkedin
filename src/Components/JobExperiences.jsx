@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Card, Container } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Card, Container, Button, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import {getExperiencesAction} from "../redux/actions"
@@ -7,10 +7,68 @@ import {getExperiencesAction} from "../redux/actions"
 const JobExperiences = (prop) => {
     const experiences = useSelector((state) => state.experiences.content)
     const dispatch = useDispatch();
+    const [showModal, setShowModal] = useState(false)
+    const [newExperience, setNewExperience] = useState({
+      role: "",
+      company: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      area: ""
+    });
+
+    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/`+ prop.prop +`/experiences`;
+
+    const openModal = () => {
+      setShowModal(true)
+    }
+  
+    const closeModal = () => {
+      setShowModal(false)
+    }
  
   useEffect(() => {
     dispatch(getExperiencesAction(prop));
   }, []);
+
+  const handleChange = (propertyName, propertyValue) => {
+    setNewExperience({
+      ...newExperience,
+      [propertyName]: propertyValue,
+    });
+  };
+
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    try {
+      const resp = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMTMyMDIyYTZhYjAwMTQxYTg1NjciLCJpYXQiOjE2ODE3MjQxOTIsImV4cCI6MTY4MjkzMzc5Mn0.x8dPST_iOah2_5aT7ZuitZWbm0q-dOuBjsrQ8N4_VJI"
+        },
+        body: JSON.stringify(newExperience)
+      });
+      if (resp.ok) {
+        setNewExperience({
+          role: "",
+          company: "",
+          startDate: "",
+          endDate: "",
+          description: "",
+          area: ""
+        });
+      } else {
+        console.log(newExperience)
+        alert("Something has gone wrong");
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   return (
     <Container>
@@ -18,7 +76,7 @@ const JobExperiences = (prop) => {
       <div className="d-flex justify-content-between">
         <Card.Title><Link to="/profile/:userId/experiences">Esperienza</Link></Card.Title>
         <div>
-          <button className='border border-0' /* onClick={funzione che mostra il modale}*/>
+          <button className='border border-0' onClick={openModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -30,6 +88,59 @@ const JobExperiences = (prop) => {
               <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
             </svg>
           </button>
+      <Modal show={showModal} onHide={closeModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Aggiungi esperienza</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group>
+              <Form.Label>Qualifica*</Form.Label>
+              <Form.Control type='text' value={newExperience.role} placeholder="Es.: Sales Manager" onChange={e => {
+                  handleChange("role", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Descrizione</Form.Label>
+              <Form.Control as='textarea' rows={5} value={newExperience.description} onChange={e => {
+                  handleChange("description", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Nome azienda*</Form.Label>
+              <Form.Control type='text' value={newExperience.company} placeholder="Es.: Reliance Industries" onChange={e => {
+                  handleChange("company", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Località</Form.Label>
+              <Form.Control type='text' value={newExperience.area} placeholder="Es.: Bangalore, India" onChange={e => {
+                  handleChange("area", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Data di inizio</Form.Label>
+              <Form.Control type="datetime-local" value={newExperience.startDate} onChange={e => {
+                  handleChange("startDate", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Data di fine</Form.Label>
+              <Form.Control type="datetime-local" value={newExperience.endDate} onChange={e => {
+                  handleChange("endDate", e.target.value);
+                }}></Form.Control>
+              <Form.Text></Form.Text>
+            </Form.Group>
+          <Button variant="primary" type='submit' onClick={closeModal}>Add experience</Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
         </div>
       </div>
       {experiences && (
@@ -43,7 +154,7 @@ const JobExperiences = (prop) => {
             <p>2 anni</p>
           </div>
         </div>
-        <Link to="/"> 
+        <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -67,6 +178,7 @@ const JobExperiences = (prop) => {
       </Card.Body>
       ))}
     </Card>
+    
     </Container>
   )
 }

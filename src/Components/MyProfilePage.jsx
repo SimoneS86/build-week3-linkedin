@@ -82,7 +82,7 @@ const MyProfilePage = (prop) => {
                       </Card.Text>
                     </Card.Body>
                   </Card>
-                  <JobExperiences prop="5fc4af46b708c200175de88f"/>
+                  <JobExperiences prop="643d132022a6ab00141a8567"/>
                   </Col>
                   <Col md={4}>
                     <Sidebar />
