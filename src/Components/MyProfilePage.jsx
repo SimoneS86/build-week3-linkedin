@@ -4,8 +4,9 @@ import { useEffect, } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
 import Sidebar from "./SideBar";
+import JobExperiences from "./JobExperiences";
 
-const MyHomePage = (prop) => {
+const MyProfilePage = (prop) => {
   const profile = useSelector((state) => state.profile.content)
   const dispatch = useDispatch();
 
@@ -81,6 +82,7 @@ const MyHomePage = (prop) => {
                       </Card.Text>
                     </Card.Body>
                   </Card>
+                  <JobExperiences prop="5fc4af46b708c200175de88f"/>
                   </Col>
                   <Col md={4}>
                     <Sidebar />
@@ -90,4 +92,4 @@ const MyHomePage = (prop) => {
             </>
     );
 }
-export default MyHomePage;
+export default MyProfilePage;
