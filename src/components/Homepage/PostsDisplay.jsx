@@ -16,9 +16,13 @@ const PostsDisplay = () => {
             />
           </div>
           <div>
-            <span className="fs-4 fw-bold ">Nome</span>
+            <span className="fs-4 fw-bold" style={{ marginLeft: 13 }}>
+              Nome
+            </span>
             <span className="fs-4 fw-bold ">Cogmome</span>
-            <div className="fs-5  ">Titolo</div>
+            <div className="fs-5" style={{ marginLeft: 13 }}>
+              Titolo
+            </div>
           </div>
         </div>
 
@@ -36,34 +40,42 @@ const PostsDisplay = () => {
         </div>
 
         <div style={{ marginBlockStart: "40px" }}>
-          <div className="like-box-feed wrapper my-1  fw-bold mx-3">
+          <div className="like-box-feed wrapper my-1   fw-bold mx-3">
             <button
               aria-label="Add a photo"
               className="d-flex align-items-center justify-content-center share-box-btn  py-2 px-1 my-1 width-hover"
             >
               <img src={like} alt="" />
-              <span className="share-box-btn-text ">Like</span>
+              <span className="share-box-btn-text " style={{ marginLeft: 10 }}>
+                Like
+              </span>
             </button>
             <button
               aria-label="Add a video"
               className="d-flex align-items-center justify-content-center share-box-btn py-2 px-1 my-1 width-hover"
             >
               <img src={comment} alt="" />
-              <span className="share-box-btn-text ">Comment</span>
+              <span className="share-box-btn-text " style={{ marginLeft: 10 }}>
+                Comment
+              </span>
             </button>
             <button
               aria-label="Create an event"
               className="d-flex align-items-center  justify-content-center share-box-btn py-2 px-1 my-1 width-hover"
             >
               <img src={repost} alt="" />
-              <span className="share-box-feed-entry-toolbar__item-text ">Repost</span>
+              <span className="share-box-feed-entry-toolbar__item-text " style={{ marginLeft: 10 }}>
+                Repost
+              </span>
             </button>
             <button
               aria-label="Write an article on LinkedIn"
               className="d-flex align-items-center justify-content-center share-box-btn py-2 px-1 my-1 width-hover"
             >
               <img src={share} alt="" />
-              <span className="share-box-feed-entry-toolbar__item-text  ">Send</span>
+              <span className="share-box-feed-entry-toolbar__item-text  " style={{ marginLeft: 10 }}>
+                Send
+              </span>
             </button>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { Col } from "react-bootstrap";
 const LeftSidebar = props => {
   return (
     <>
-      <Col className="left-side-col">
+      <Col lg={12} md={10} className="left-side-col">
         <div className="left-profile-mini">
           <div className="profile-cover-mini">
             <img

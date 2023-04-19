@@ -94,9 +94,8 @@
   height: 72px;
   border-radius: 50%;
   border: 2px solid var(--linkedin-white);
-  margin-left: 19px;
+  margin-left: 55px;
   top: 170px;
-  transform: translateX(60%);
   cursor: pointer;
 }
 
@@ -141,28 +140,4 @@
   border: solid 1px var(--linkedin-white-grey);
   position: sticky;
   top: 60px;
-}
-
-@media screen and (max-width: 1000px) {
-  .collapse-hide {
-    display: none !important;
-  }
-
-  .left-profile-mini {
-    height: 150px;
-    border-radius: 10px;
-    margin-block-end: 20px;
-    border: 1px solid var(--linkedin-white-grey);
-  }
-  .profile-text-mini {
-    border-bottom: 1px solid transparent;
-  }
-
-  .navbar-toggler {
-    border: none;
-  }
-
-  .username-mini {
-    cursor: pointer;
-  }
 }
