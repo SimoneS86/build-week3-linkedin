@@ -83,7 +83,7 @@ const JobExperiences = (prop) => {
     e.preventDefault();
 
     try {
-      const resp = await fetch('https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/:expId', {
+      const resp = await fetch(`https://striveschool-api.herokuapp.com/api/profile/` + prop.prop + `/experiences/${newExperience.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
