@@ -4,11 +4,7 @@ const WritePost = () => {
   return (
     <div className="mainContainerPost p-1">
       <div className="d-flex align-items-center">
-        <img
-          className="userPicturePost mt-2 ml-3"
-          src="https://via.placeholder.com/50x50.png?text=Placeholder"
-          alt=""
-        />{" "}
+        <img className="userPicturePost mt-2 " src="https://via.placeholder.com/50x50.png?text=Placeholder" alt="" />{" "}
         <Button className="userPostBtn m-2, p-2 w-100 mx-3">
           <span className="justify-content-flex-start ">Start a post</span>
         </Button>

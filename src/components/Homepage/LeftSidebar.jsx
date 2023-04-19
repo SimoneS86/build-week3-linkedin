@@ -43,16 +43,16 @@ const LeftSidebar = props => {
           <p className="mb-2  ">Recent</p>
           <div className="  fw-bold">
             <p className="mb-2 d-flex">
-              <img src={hashtag} alt="" className="mr-2" style={{ width: "12px" }} /> Recent
+              <img src={hashtag} alt="" style={{ width: "12px" }} /> Recent
             </p>
             <p className="mb-2 d-flex">
-              <img src={hashtag} alt="" className="mr-2" style={{ width: "12px" }} /> Recent
+              <img src={hashtag} alt="" style={{ width: "12px" }} /> Recent
             </p>
             <p className="mb-2 d-flex">
-              <img src={hashtag} alt="" className="mr-2" style={{ width: "12px" }} /> Recent
+              <img src={hashtag} alt="" style={{ width: "12px" }} /> Recent
             </p>
             <p className="mb-2 d-flex">
-              <img src={hashtag} alt="" className="mr-2" style={{ width: "12px" }} /> Recent
+              <img src={hashtag} alt="" style={{ width: "12px" }} /> Recent
             </p>
           </div>
         </div>
