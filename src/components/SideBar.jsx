@@ -1,15 +1,23 @@
 import { Card, Button, Row, Col, Image } from "react-bootstrap";
 import sidebarImg from "../assets/image/sidebar.png";
 import logo from "../assets/icons/Logo-nav.svg";
+import { IoIosHelpCircle } from "react-icons/io";
+import { HiUserAdd } from "react-icons/hi";
 
 function Sidebar() {
   return (
     <>
       <Card className="mt-3">
         <Card.Body>
-          <Card.Text className="text-secondary ">Modifica il tuo profilo pubblico e l'URL</Card.Text>
+          <Card.Text className="text-secondary ">
+            Modifica il tuo profilo pubblico e l'URL{" "}
+            <IoIosHelpCircle className="fw-bold fs-3" style={{ marginLeft: 30 }} />
+          </Card.Text>
           <hr />
-          <Card.Text className="text-secondary ">Aggiungi il tuo profilo in un'altra lingua</Card.Text>
+          <Card.Text className="text-secondary ">
+            Aggiungi il tuo profilo in un'altra lingua{" "}
+            <IoIosHelpCircle className="fw-bold fs-3" style={{ marginLeft: 23.5 }} />
+          </Card.Text>
           <Card.Text className="d-flex align-items-center"></Card.Text>
         </Card.Body>
       </Card>
@@ -33,7 +41,7 @@ function Sidebar() {
               <h5>Simone Sensini</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
-                Collegati
+                <HiUserAdd /> Collegati
               </Button>
             </Col>
 
@@ -46,7 +54,7 @@ function Sidebar() {
               <h5>Salvatore Mercurio</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
-                Collegati
+                <HiUserAdd /> Collegati
               </Button>
             </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3 mb-3">
@@ -60,7 +68,7 @@ function Sidebar() {
               <h5>Giuseppe Canzoneri</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
-                Collegati
+                <HiUserAdd /> Collegati
               </Button>
             </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3">

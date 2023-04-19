@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
 import Sidebar from "./SideBar";
+import { HiOutlinePencil } from "react-icons/hi";
 
 const MyHomePage = prop => {
   const profile = useSelector(state => state.profile.content);
@@ -20,9 +21,16 @@ const MyHomePage = prop => {
             <Card className="mt-3 bg-white text-dark position-relative border-3 mb-3">
               <Button
                 style={{ right: "10px", top: "10px" }}
-                variant="outline-secondary border-0 py-1 px-2  position-absolute"
+                variant="outline-secondary border-0 py-1 px-2 rounded-circle position-absolute"
               >
-                modifica
+                <HiOutlinePencil
+                  className="text-primary fs-3"
+                  style={{
+                    borderRadius: "50%",
+                    backgroundColor: "#fff",
+                    padding: "5px",
+                  }}
+                />
               </Button>
               <Card.Img variant="top" src="https://picsum.photos/900/300" width={800} height={200} />
               <Card.Body className="position-relative mt-4">
@@ -38,7 +46,7 @@ const MyHomePage = prop => {
                   style={{ right: "10px", top: "0px" }}
                   variant="outline-secondary border-0 py-2 position-absolute"
                 >
-                  Modifica
+                  <HiOutlinePencil className="text-secondary fs-4" />
                 </Button>
                 <Card.Title className="fs-4 mb-0">
                   {profile.name}&nbsp;{profile.surname}
@@ -67,7 +75,7 @@ const MyHomePage = prop => {
                         style={{ right: "0px", top: "0px" }}
                         variant="outline-secondary border-0 py-1 px-2  position-absolute"
                       >
-                        modifica
+                        <HiOutlinePencil className="text-secondary fs-4" />
                       </Button>
                       <Alert variant="primary" style={{ width: 400 }}>
                         <Card.Subtitle className="mb-0 text-dark">Disponibile a lavorare</Card.Subtitle>
@@ -85,7 +93,7 @@ const MyHomePage = prop => {
                   style={{ right: "0px", top: "0px" }}
                   variant="outline-secondary border-0 py-1 px-2 position-absolute"
                 >
-                  Modifica
+                  <HiOutlinePencil className="text-secondary fs-4" />
                 </Button>
                 <Card.Title className="mb-2 fs-4">Informazioni</Card.Title>
                 <Card.Text className="mb-0">{profile.bio}</Card.Text>
