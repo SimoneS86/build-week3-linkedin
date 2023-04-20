@@ -81,20 +81,20 @@ function Sidebar() {
           </Card.Text>
           <Card.Text className="text-dark "> Aggiungi Nuove competenze con questi corsi, gratuiti per 24 ore</Card.Text>
           <Row>
-            <Col md={3}>
+            <Col md={4}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={9}>
+            <Col md={8}>
               <h5>Fondamenti di programmazione...</h5>
             </Col>
           </Row>
           <hr />
 
           <Row>
-            <Col md={3}>
+            <Col md={4}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={9}>
+            <Col md={8}>
               <h5>Impara Python</h5>
             </Col>
           </Row>
@@ -102,10 +102,10 @@ function Sidebar() {
           <hr />
 
           <Row>
-            <Col md={3}>
+            <Col md={4}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={9}>
+            <Col md={8}>
               <h5>Python per non programmatori</h5>
             </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3">
