@@ -2,7 +2,7 @@ import { Card, Button, Row, Col, Image } from "react-bootstrap";
 import sidebarImg from "../assets/image/sidebar.png";
 import logo from "../assets/icons/Logo-nav.svg";
 
-function Sidebar() {
+function SideBar() {
   return (
     <>
       <Card className="mt-3">
@@ -102,4 +102,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SideBar;
