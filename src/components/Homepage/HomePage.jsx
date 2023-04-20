@@ -33,16 +33,16 @@ const HomePage = () => {
                     <p className="user-role-mini ">{profile.title}</p>
                   </div>
                   <div className="profile-text-mini collapse-hide mt-1 align-items-start pl-2">
-                    <p className="username-mini  fw-bold margin-0 ">Fatti assumere più velocemente</p>
-                    <p className="user-role-mini  fw-bold d-flex align-items-center mt-3">
+                    <p className="username-mini  fw-bold ms-2 ">Fatti assumere più velocemente</p>
+                    <p className="user-role-mini  fw-bold d-flex align-items-center mt-3 ">
                       <img src={premium} alt="" style={{ width: "20px" }} /> Upgrade your plan
                     </p>
                   </div>
                 </div>
               </div>
               <div className="profile-text-mini2 collapse-hide  align-items-start pl-2 mt-5">
-                <p className="user-role-mini  fw-bold d-flex align-items-center mt-1">
-                  <img src={items} alt="" style={{ width: "13px" }} /> I miei elementi
+                <p className="user-role-mini  fw-bold d-flex align-items-center mt-1 ms-2">
+                  <img src={items} alt="" style={{ width: "13px" }} className="me-2" /> I miei elementi
                 </p>
               </div>
 

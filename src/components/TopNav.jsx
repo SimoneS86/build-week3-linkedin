@@ -74,64 +74,63 @@ const TopNav = () => {
                   </div>
                 </Nav.Link>
 
-                <div className="profile-drop-down menu-size">
+                <div className="profile-drop-down menu-size ">
                   <img src={profile && profile.image} alt="" className="profile-icon" />
-                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name">
-                    <NavDropdown.Item className="dropdown-main-action d-flex align-items-center">
-                      <span>
+                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name mt-3">
+                    <NavDropdown.Item className="dropdown-main-action d-flex align-items-center ">
+                      <spa>
                         <img src={profile && profile.image} alt="" className="profile-icon2 mr-2" />
-                      </span>
+                      </spa>
                       <div style={{ color: "black" }}>
-                        <p className="fs-16 fw-700">{profile && profile.name}</p>
-                        <p className="fs-14 ">{profile && profile.surname}</p>
+                        <p>{profile && profile.name}</p>
+                        <p>{profile && profile.surname}</p>
                       </div>
                     </NavDropdown.Item>
                     <div
                       href="#action/3.1.2"
                       className="dropdown-secondary-action d-flex justify-content-center mt-2 mb-2"
                     >
-                      <Link to="/" className="btn nav-view-profile-btn fs-14">
+                      <Link to="/" className="btn nav-view-profile-btn ">
                         View Profile
                       </Link>
                     </div>
                     <NavDropdown.Divider />
-                    <div href="#action/3.2" className="dropdown-main-action fs-16 fw-800 ml-4">
+                    <div href="#action/3.2" className="dropdown-main-action  fw-bold ms-3">
                       Account
                     </div>
-                    <NavDropdown.Item href="#action/3.2.1" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.2.1" className="dropdown-secondary-action ">
                       Try premium for free
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2.2" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.2.2" className="dropdown-secondary-action ">
                       Settings & Privacy
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2.3" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.2.3" className="dropdown-secondary-action ">
                       Help
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2.4" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.2.4" className="dropdown-secondary-action ">
                       Language
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <div href="#action/3.3" className="dropdown-main-action fs-16 fw-800 ml-4">
+                    <div href="#action/3.3" className="dropdown-main-action  fw-bold ms-3">
                       Manage
                     </div>
-                    <NavDropdown.Item href="#action/3.3.1" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.3.1" className="dropdown-secondary-action ">
                       Posts & Activity
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3.2" className="dropdown-secondary-action fs-14">
+                    <NavDropdown.Item href="#action/3.3.2" className="dropdown-secondary-action ">
                       Job Posting Account
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item className="fs-14">Sign Out</NavDropdown.Item>
+                    <NavDropdown.Item>Sign Out</NavDropdown.Item>
                   </NavDropdown>
                 </div>
 
                 <div className="profile-drop-down menu-size work">
                   <img src={more} alt="" className="nav-menu-icon" />
-                  <NavDropdown title="Work" id="basic-nav-dropdown" className="profile-name "></NavDropdown>
+                  <NavDropdown title="Work" id="basic-nav-dropdown " className="profile-name mt-3 "></NavDropdown>
                 </div>
                 <Nav.Link href="#premium" className="text-align-center ">
-                  <p className="fs-12 fw-700 premium">Network Smarter,</p>{" "}
-                  <p className="fs-12 fw-700 premium">Try premium Free!</p>
+                  <p className="premium">Network Smarter,</p> <p className="premium">Try premium Free!</p>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
