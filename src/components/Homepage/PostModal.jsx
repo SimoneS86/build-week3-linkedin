@@ -3,7 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostsAction } from "../../redux/actions";
 
-const AddPostModal = ({ show, handleClose }) => {
+const PostModal = ({ show, handleClose }) => {
   const dispatch = useDispatch();
   const profile = useSelector(state => state.profile.content);
   const [post, setPost] = useState({
@@ -85,4 +85,4 @@ const AddPostModal = ({ show, handleClose }) => {
   );
 };
 
-export default AddPostModal;
+export default PostModal;

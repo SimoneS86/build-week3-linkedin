@@ -84,7 +84,7 @@ const TopNav = () => {
                   <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name mt-3">
                     <NavDropdown.Item className="dropdown-main-action d-flex align-items-center ">
                       <spa>
-                        <img src={profile && profile.image} alt="" className="profile-icon2 mr-2" />
+                        <img src={profile && profile.image} alt="" className="profile-icon2 me-3" />
                       </spa>
                       <div style={{ color: "black" }}>
                         <p>{profile && profile.name}</p>

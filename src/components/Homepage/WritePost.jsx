@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import AddPostModal from "./AddPostModal";
+import AddPostModal from "./PostModal";
 
 const WritePost = () => {
   const profile = useSelector(state => state.profile.content);
