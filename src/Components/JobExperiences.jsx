@@ -3,10 +3,12 @@ import { Card, Container, Button, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import {getExperiencesAction} from "../redux/actions"
+import { useParams } from "react-router-dom";
 
-const JobExperiences = (prop) => {
+const JobExperiences = () => {
     const experiences = useSelector((state) => state.experiences.content)
     const dispatch = useDispatch();
+    const params = useParams();
     const [showNewModal, setShowNewModal] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [newExperience, setNewExperience] = useState({
@@ -18,7 +20,7 @@ const JobExperiences = (prop) => {
       area: ""
     });
 
-    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/`+ prop.prop +`/experiences`;
+    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/`+ params.userId +`/experiences`;
 
     const openNewModal = () => {
       setShowNewModal(true)
@@ -36,9 +38,13 @@ const JobExperiences = (prop) => {
       setShowModal(false)
     }
  
-  useEffect(() => {
-    dispatch(getExperiencesAction(prop));
-  }, []);
+    useEffect(() => {
+      if (params.userId) {
+        dispatch(getExperiencesAction(params.userId));
+      } else {
+        dispatch(getExperiencesAction(experiences.user));
+      }
+    }, []);
 
   const handleChange = (propertyName, propertyValue) => {
     setNewExperience({
@@ -83,7 +89,7 @@ const JobExperiences = (prop) => {
     e.preventDefault();
 
     try {
-      const resp = await fetch(`https://striveschool-api.herokuapp.com/api/profile/` + prop.prop + `/experiences/${newExperience.id}`, {
+      const resp = await fetch(`https://striveschool-api.herokuapp.com/api/profile/` + params.userId + `/experiences/${newExperience.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

@@ -29,9 +29,10 @@ export const getProfileAction = userId => {
   };
 };
 
-export const getExperiencesAction = prop => {
+export const getExperiencesAction = userId => {
   return async dispatch => {
-    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/` + prop.prop + `/experiences`;
+    const endpoint = 'https://striveschool-api.herokuapp.com/api/profile/' + userId + '/experiences' 
+      
     const fetchOpt = {
       headers: {
         Authorization:

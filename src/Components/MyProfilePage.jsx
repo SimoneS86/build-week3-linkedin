@@ -98,7 +98,7 @@ const MyProfilePage = () => {
                 <Card.Text className="mb-0">{profile.bio}</Card.Text>
               </Card.Body>
             </Card>
-            <JobExperiences prop="643d01c1186a8700143867c7" />
+            <JobExperiences />
           </Col>
           <Col md={4}>
             <SideBar />
