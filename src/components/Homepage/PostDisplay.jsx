@@ -10,10 +10,10 @@ import comment from "../../assets/icons/chat.svg";
 import repost from "../../assets/icons/share.svg";
 import share from "../../assets/icons/Send 2.svg";
 
-const Post = () => {
+const PostDisplay = () => {
   const [selectedPost, setSelectedPost] = useState(null);
 
-  const profile = useSelector(state => state.posts.content);
+  const profile = useSelector(state => state.profile.content);
   const dispatch = useDispatch();
 
   const [showEdit, setShowEdit] = useState(false);
@@ -129,4 +129,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default PostDisplay;
