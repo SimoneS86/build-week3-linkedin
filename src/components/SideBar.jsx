@@ -1,7 +1,6 @@
 import { Card, Button, Row, Col, Image } from "react-bootstrap";
 import sidebarImg from "../assets/image/sidebar.png";
 import logo from "../assets/icons/Logo-nav.svg";
-import { IoIosHelpCircle } from "react-icons/io";
 import { HiUserAdd } from "react-icons/hi";
 
 function Sidebar() {

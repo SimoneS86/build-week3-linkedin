@@ -46,23 +46,25 @@ const TopNav = () => {
                     <div>
                       <img src={mynetwork} alt="" className="nav-menu-icon" />
                     </div>
-                    <p className="fs-12 nav-text">Rete</p>
+                    <p className=" nav-text">Rete</p>
                   </div>
                 </Nav.Link>
-                <Nav.Link className="p-0">
+                <Nav className="p-0">
                   <div className=" d-flex flex-column align-items-center nav-icon menu-size">
                     <div>
                       <img src={jobs} alt="" className="nav-menu-icon" />
                     </div>
-                    <p className="fs-12 nav-text">Lavoro</p>
+                    <Link to="/jobs" className=" nav-text text-decoration-none mb-3">
+                      Lavoro
+                    </Link>
                   </div>
-                </Nav.Link>
+                </Nav>
                 <Nav.Link className="p-0">
                   <div className=" d-flex flex-column align-items-center nav-icon menu-size">
                     <div>
                       <img src={message} alt="" className="nav-menu-icon" />
                     </div>
-                    <p className="fs-12 nav-text">Messagistica</p>
+                    <p className=" nav-text">Messagistica</p>
                   </div>
                 </Nav.Link>
                 <Nav.Link className="p-0">
@@ -70,7 +72,7 @@ const TopNav = () => {
                     <div>
                       <img src={notification} alt="" className="nav-menu-icon" />
                     </div>
-                    <p className="fs-12 nav-text">Notifiche</p>
+                    <p className=" nav-text">Notifiche</p>
                   </div>
                 </Nav.Link>
 

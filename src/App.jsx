@@ -6,6 +6,7 @@ import LinkedinFooter from "./Components/LinkedinFooter";
 import TopNav from "./Components/TopNav";
 import JobExperiences from "./Components/JobExperiences";
 import HomePage from "./Components/Homepage/HomePage";
+import Jobs from "./Components/Job";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/profile/:userId" element={<HomePage />} />
           <Route path="/" element={<MyProfilePage prop="643d132022a6ab00141a8567" />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/profile/:userId/experiences" element={<JobExperiences prop="643d132022a6ab00141a8567" />} />
         </Routes>
         <LinkedinFooter />

@@ -1,6 +1,7 @@
 export const ADD_PROFILE = "ADD_PROFILE";
 export const ADD_EXPERIENCES = "ADD_EXPERIENCES";
 export const ADD_POSTS = "ADD_POSTS";
+export const GET_JOBS = "GET_JOBS";
 
 export const getProfileAction = prop => {
   return async dispatch => {
@@ -68,6 +69,27 @@ export const getPostsAction = () => {
         dispatch({ type: ADD_POSTS, payload: dataPosts });
       } else {
         alert("Errore qualcosa è andato storto");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const getJobsAction = () => {
+  const url = "https://strive-benchmark.herokuapp.com/api/jobs";
+  const token = process.env.REACT_APP_API_KEY;
+  return async dispatch => {
+    try {
+      let resp = await fetch(url, {
+        headers: {
+          Authorization: token,
+        },
+      });
+      if (resp.ok) {
+        let data = await resp.json();
+
+        dispatch({ type: GET_JOBS, payload: data.data });
       }
     } catch (error) {
       console.log(error);
