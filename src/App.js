@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import MyProfilePage from './Components/MyProfilePage';
-import LinkedinFooter from './Components/LinkedinFooter';
-import TopNav from './Components/TopNav';
-import JobExperiences from './Components/JobExperiences';
+import MyProfilePage from './components/MyProfilePage';
+import LinkedinFooter from './components/LinkedinFooter';
+import TopNav from './components/TopNav';
+import JobExperiences from './components/JobExperiences';
 
 function App() {
   return (
