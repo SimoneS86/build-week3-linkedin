@@ -2,7 +2,7 @@ import { Card, Button, Row, Col,Container, Alert, } from "react-bootstrap";
 import { useEffect, } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
-import Sidebar from "./SideBar";
+import Sidebar from "./Sidebar";
 import JobExperiences from "./JobExperiences";
 
 const MyProfilePage = (prop) => {
