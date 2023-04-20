@@ -70,11 +70,13 @@ const JobExperiences = prop => {
   };
 
   return (
-    <Container>
+    <Container className="px-0">
       <Card>
         <div className="d-flex justify-content-between">
-          <Card.Title>
-            <Link to="/profile/:userId/experiences">Esperienza</Link>
+          <Card.Title className="mt-3">
+            <Link to="/profile/:userId/experiences" className="text-dark ms-3 text-decoration-none">
+              Esperienza
+            </Link>
           </Card.Title>
           <div>
             <button className="border border-0" onClick={openModal}>
@@ -179,8 +181,8 @@ const JobExperiences = prop => {
             <Card.Body key={i}>
               <div className="d-flex justify-content-between">
                 <div className="d-flex">
-                  <Card.Img src={experience.image} style={{ width: 10, heigth: 10 }} />
-                  <div>
+                  <Card.Img src={experience.image} style={{ width: 50, heigth: 20 }} />
+                  <div className="ms-4">
                     <h6>{experience.company}</h6>
                     <p>2 anni</p>
                   </div>
@@ -198,7 +200,7 @@ const JobExperiences = prop => {
                   </svg>
                 </Link>
               </div>
-              <ul>
+              <ul className="ms-5">
                 <li>
                   <h5>{experience.role}</h5>
                   <p>
