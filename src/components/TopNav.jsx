@@ -8,6 +8,7 @@ import message from "../assets/icons/messages.svg";
 import notification from "../assets/icons/notifications.svg";
 import more from "../assets/icons/more.svg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const TopNav = () => {
   const profile = useSelector(state => state.profile.content);
@@ -30,14 +31,16 @@ const TopNav = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="elapsed-menu mr-auto d-flex align-items-center">
-                <Nav.Link className="p-0">
-                  <div className=" d-flex flex-column align-items-center nav-icon menu-size">
+                <Nav.Item className="p-0">
+                  <div className=" d-flex flex-column align-items-center nav-icon menu-size mb-3">
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
-                    <p className="fs-12 nav-text">Home</p>
+                    <Link to="/profile/:userId/" className="text-dark text-decoration-none">
+                      Home
+                    </Link>
                   </div>
-                </Nav.Link>
+                </Nav.Item>
                 <Nav.Link className="p-0">
                   <div className=" d-flex flex-column align-items-center nav-icon menu-size">
                     <div>
@@ -73,8 +76,7 @@ const TopNav = () => {
 
                 <div className="profile-drop-down menu-size">
                   <img src={profile && profile.image} alt="" className="profile-icon" />
-                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name mt-3">
-                    {/* PADDING AGGIUNTO */}
+                  <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name">
                     <NavDropdown.Item className="dropdown-main-action d-flex align-items-center">
                       <span>
                         <img src={profile && profile.image} alt="" className="profile-icon2 mr-2" />
@@ -88,7 +90,9 @@ const TopNav = () => {
                       href="#action/3.1.2"
                       className="dropdown-secondary-action d-flex justify-content-center mt-2 mb-2"
                     >
-                      <Button className="btn nav-view-profile-btn fs-14">View Profile</Button>
+                      <Link to="/" className="btn nav-view-profile-btn fs-14">
+                        View Profile
+                      </Link>
                     </div>
                     <NavDropdown.Divider />
                     <div href="#action/3.2" className="dropdown-main-action fs-16 fw-800 ml-4">
@@ -123,10 +127,9 @@ const TopNav = () => {
 
                 <div className="profile-drop-down menu-size work">
                   <img src={more} alt="" className="nav-menu-icon" />
-                  <NavDropdown title="Work" id="basic-nav-dropdown" className="profile-name mt-3"></NavDropdown>{" "}
-                  {/* PADDING AGGIUNTO */}
+                  <NavDropdown title="Work" id="basic-nav-dropdown" className="profile-name "></NavDropdown>
                 </div>
-                <Nav.Link href="#premium" className="text-align-center mt-4 ">
+                <Nav.Link href="#premium" className="text-align-center ">
                   <p className="fs-12 fw-700 premium">Network Smarter,</p>{" "}
                   <p className="fs-12 fw-700 premium">Try premium Free!</p>
                 </Nav.Link>

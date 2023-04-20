@@ -1,3 +1,7 @@
+.sfondo {
+  background-color: #f3f2ef;
+}
+
 .mainContainerPost {
   background-color: var(--linkedin-white);
   border-radius: 10px;
@@ -94,8 +98,8 @@
   height: 72px;
   border-radius: 50%;
   border: 2px solid var(--linkedin-white);
-  margin-left: 55px;
-  top: 170px;
+  margin-left: 40px;
+  top: 135px;
   cursor: pointer;
 }
 
