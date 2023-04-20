@@ -209,9 +209,12 @@ const JobExperiences = prop => {
                   <p>{experience.description}</p>
                 </li>
               </ul>
-              <hr className="border border-dark" />
+              <hr className="border border-secondary" />
             </Card.Body>
           ))}
+        <Button variant="secondary" className=" border-0  text-secondary bg-white w-100">
+          Mostra tutte le esperienze (13)
+        </Button>
       </Card>
     </Container>
   );
