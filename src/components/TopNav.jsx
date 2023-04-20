@@ -39,7 +39,7 @@ const TopNav = () => {
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
-                    <Link to="/profile/:userId/" className="text-dark text-decoration-none">
+                    <Link to="/" className="text-dark text-decoration-none">
                       Home
                     </Link>
                   </div>

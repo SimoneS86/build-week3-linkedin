@@ -3,9 +3,11 @@ export const ADD_EXPERIENCES = "ADD_EXPERIENCES";
 export const ADD_POSTS = "ADD_POSTS";
 export const GET_JOBS = "GET_JOBS";
 
-export const getProfileAction = prop => {
+export const getProfileAction = userId => {
   return async dispatch => {
-    const endpoint = "https://striveschool-api.herokuapp.com/api/profile/" + prop.prop;
+    const endpoint = userId
+      ? "https://striveschool-api.herokuapp.com/api/profile/" + userId
+      : "https://striveschool-api.herokuapp.com/api/profile/me";
     const fetchOpt = {
       headers: {
         Authorization:

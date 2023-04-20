@@ -14,10 +14,11 @@ function App() {
       <BrowserRouter>
         <TopNav />
         <Routes>
-          <Route path="/profile/:userId" element={<HomePage />} />
-          <Route path="/" element={<MyProfilePage prop="643d132022a6ab00141a8567" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<MyProfilePage />} />
+          <Route path="/profile/:userId" element={<MyProfilePage />} />
           <Route path="/jobs" element={<Jobs />} />
-          <Route path="/profile/:userId/experiences" element={<JobExperiences prop="643d132022a6ab00141a8567" />} />
+          <Route path="/profile/experiences/:expId" element={<JobExperiences prop="643d132022a6ab00141a8567" />} />
         </Routes>
         <LinkedinFooter />
       </BrowserRouter>

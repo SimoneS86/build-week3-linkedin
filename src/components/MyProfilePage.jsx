@@ -4,13 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
 import Sidebar from "./SideBar";
 import JobExperiences from "./JobExperiences";
+import { useParams } from "react-router-dom";
 
-const MyProfilePage = prop => {
+const MyProfilePage = () => {
   const profile = useSelector(state => state.profile.content);
   const dispatch = useDispatch();
+  const params = useParams();
 
   useEffect(() => {
-    dispatch(getProfileAction(prop));
+    if (params.userId) {
+      dispatch(getProfileAction(params.userId));
+    } else {
+      dispatch(getProfileAction());
+    }
   }, []);
 
   return (
