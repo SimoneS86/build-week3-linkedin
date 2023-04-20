@@ -1,14 +1,36 @@
+import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import AddPostModal from "./AddPostModal";
 
 const WritePost = () => {
   const profile = useSelector(state => state.profile.content);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="mainContainerPost p-1">
       <div className="d-flex align-items-center">
-        <img className="userPicturePost mt-2" src={profile.image} alt="" />{" "}
-        <Button className="userPostBtn m-2, p-2 w-100 mx-3">
-          <span className="justify-content-flex-start ">Start a post</span>
+        <AddPostModal handleClose={handleClose} show={show} />
+        {profile && (
+          <img
+            className="border border-dark border-2 me-4 rounded-circle "
+            src={profile.image}
+            alt="avatar"
+            width={100}
+            height={70}
+          />
+        )}
+        <Button
+          className="w-100 rounded-pill"
+          variant="outline-secondary"
+          onClick={() => {
+            handleShow();
+          }}
+          sty
+        >
+          Avvia un post
         </Button>
       </div>
       <div className="share-box-feed wrapper my-1  fw-bold">

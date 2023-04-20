@@ -5,7 +5,9 @@ import premium from "../../assets/icons/Premium.svg";
 import items from "../../assets/icons/items.svg";
 import hashtag from "../../assets/icons/hashtag.svg";
 import { useSelector } from "react-redux";
-import PostsDisplay from "./PostsDisplay";
+// import PostsDisplay from "./PostsDisplay";
+// import AddPost from "./AddPost";
+import Post from "./Post";
 
 const HomePage = () => {
   const profile = useSelector(state => state.profile.content);
@@ -70,13 +72,15 @@ const HomePage = () => {
           </Col>
           <Col xs={6}>
             <WritePost />
+            {/* <AddPost /> */}
+            <Post />
             <div className="d-flex align-items-center justify-content-between">
               <hr className="w-75"></hr>
               <span className="mx-2">
                 Sort by: <span className="fw-bold">Main</span>
               </span>
             </div>
-            <PostsDisplay />
+            {/* <PostsDisplay /> */}
           </Col>
           <Col xs={3}>
             <Sidebar />
