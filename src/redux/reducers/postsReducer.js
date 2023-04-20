@@ -1,12 +1,12 @@
-import { ADD_EXPERIENCES } from "../actions";
+import { ADD_POSTS } from "../actions";
 
 const initialState = {
   content: [],
 };
 
-const experiencesReducer = (state = initialState, action) => {
+const postsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_EXPERIENCES:
+    case ADD_POSTS:
       return {
         ...state,
         content: action.payload,
@@ -16,4 +16,4 @@ const experiencesReducer = (state = initialState, action) => {
   }
 };
 
-export default experiencesReducer;
+export default postsReducer;
