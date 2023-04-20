@@ -32,7 +32,10 @@ const TopNav = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="elapsed-menu mr-auto d-flex align-items-center">
                 <Nav.Item className="p-0">
-                  <div className=" d-flex flex-column align-items-center nav-icon menu-size mb-3">
+                  <div
+                    className=" d-flex flex-column align-items-center nav-icon menu-size "
+                    style={{ marginBottom: 15 }}
+                  >
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
@@ -42,7 +45,7 @@ const TopNav = () => {
                   </div>
                 </Nav.Item>
                 <Nav.Link className="p-0">
-                  <div className=" d-flex flex-column align-items-center nav-icon menu-size">
+                  <div className=" d-flex flex-column align-items-center nav-icon menu-size mb-0">
                     <div>
                       <img src={mynetwork} alt="" className="nav-menu-icon" />
                     </div>

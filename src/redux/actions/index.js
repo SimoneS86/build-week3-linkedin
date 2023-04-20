@@ -78,12 +78,12 @@ export const getPostsAction = () => {
 
 export const getJobsAction = () => {
   const url = "https://strive-benchmark.herokuapp.com/api/jobs";
-  const token = process.env.REACT_APP_API_KEY;
   return async dispatch => {
     try {
       let resp = await fetch(url, {
         headers: {
-          Authorization: token,
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYjVhNWZjYTEyOTAwMTQ0MGMxMzkiLCJpYXQiOjE2ODE4MzEzMzMsImV4cCI6MTY4MzA0MDkzM30.pvZfvfFjc_HrXl2dCYImrEJra1UTSglnrOIwLpsuPnk",
         },
       });
       if (resp.ok) {

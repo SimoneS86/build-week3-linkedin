@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
-import { FaBookmark, FaRegBookmark } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa";
 import foto from "../assets/image/sidebar.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
