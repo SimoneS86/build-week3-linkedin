@@ -17,7 +17,7 @@ function JobSide() {
             <img src={bel} alt="" className="nav-menu-icon  " /> Avvisi Offerte di lavoro
           </Card.Text>
           <Card.Text className="d-flex align-items-center ms-3">Indicazioni per chi cerca lavoro</Card.Text>
-          <Card.Text className="d-flex align-items-center ms-2">Impostazioni candidatura</Card.Text>
+          <Card.Text className="d-flex align-items-center ms-3">Impostazioni candidatura</Card.Text>
         </Card.Body>
       </Card>
       <Button variant="outline-primary" className="text-primary w-100">
