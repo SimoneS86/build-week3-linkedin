@@ -1,4 +1,4 @@
-import { Button, Container, Form, FormControl, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Container, Form, FormControl, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import "./TopNav.css";
 import logo from "../assets/icons/Logo-nav.svg";
 import home from "../assets/icons/home.svg";
@@ -39,7 +39,7 @@ const TopNav = () => {
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
-                    <Link to="/profile/:userId/" className="text-dark text-decoration-none">
+                    <Link to="/" className="text-dark text-decoration-none">
                       Home
                     </Link>
                   </div>
@@ -84,7 +84,7 @@ const TopNav = () => {
                   <NavDropdown title="Me" id="basic-nav-dropdown" className="profile-name mt-3">
                     <NavDropdown.Item className="dropdown-main-action d-flex align-items-center ">
                       <spa>
-                        <img src={profile && profile.image} alt="" className="profile-icon2 mr-2" />
+                        <img src={profile && profile.image} alt="" className="profile-icon2 me-3" />
                       </spa>
                       <div style={{ color: "black" }}>
                         <p>{profile && profile.name}</p>

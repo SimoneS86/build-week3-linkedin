@@ -2,15 +2,21 @@ import { Card, Button, Row, Col, Container, Alert } from "react-bootstrap";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
-import Sidebar from "./SideBar";
+import SideBar from "./SideBar";
 import JobExperiences from "./JobExperiences";
+import { useParams } from "react-router-dom";
 
-const MyProfilePage = prop => {
+const MyProfilePage = () => {
   const profile = useSelector(state => state.profile.content);
   const dispatch = useDispatch();
+  const params = useParams();
 
   useEffect(() => {
-    dispatch(getProfileAction(prop));
+    if (params.userId) {
+      dispatch(getProfileAction(params.userId));
+    } else {
+      dispatch(getProfileAction());
+    }
   }, []);
 
   return (
@@ -95,7 +101,7 @@ const MyProfilePage = prop => {
             <JobExperiences prop="643d01c1186a8700143867c7" />
           </Col>
           <Col md={4}>
-            <Sidebar />
+            <SideBar />
           </Col>
         </Row>
       </Container>
