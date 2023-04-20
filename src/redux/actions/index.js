@@ -1,14 +1,13 @@
 export const ADD_PROFILE = "ADD_PROFILE";
 export const ADD_EXPERIENCES = "ADD_EXPERIENCES";
-export const ADD_POSTS = "ADD_POSTS";
 
-export const getProfileAction = prop => {
-  return async dispatch => {
+export const getProfileAction = (prop) => {
+  return async (dispatch) => {
     const endpoint = "https://striveschool-api.herokuapp.com/api/profile/" + prop.prop;
     const fetchOpt = {
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYjVhNWZjYTEyOTAwMTQ0MGMxMzkiLCJpYXQiOjE2ODE4MzEzMzMsImV4cCI6MTY4MzA0MDkzM30.pvZfvfFjc_HrXl2dCYImrEJra1UTSglnrOIwLpsuPnk",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMTMyMDIyYTZhYjAwMTQxYTg1NjciLCJpYXQiOjE2ODE3MjQxOTIsImV4cCI6MTY4MjkzMzc5Mn0.x8dPST_iOah2_5aT7ZuitZWbm0q-dOuBjsrQ8N4_VJI",
       },
     };
     console.log(endpoint);
@@ -26,13 +25,13 @@ export const getProfileAction = prop => {
   };
 };
 
-export const getExperiencesAction = prop => {
-  return async dispatch => {
+export const getExperiencesAction = (prop) => {
+  return async (dispatch) => {
     const endpoint = `https://striveschool-api.herokuapp.com/api/profile/` + prop.prop + `/experiences`;
     const fetchOpt = {
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYjVhNWZjYTEyOTAwMTQ0MGMxMzkiLCJpYXQiOjE2ODE4MzEzMzMsImV4cCI6MTY4MzA0MDkzM30.pvZfvfFjc_HrXl2dCYImrEJra1UTSglnrOIwLpsuPnk",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMTMyMDIyYTZhYjAwMTQxYTg1NjciLCJpYXQiOjE2ODE3MjQxOTIsImV4cCI6MTY4MjkzMzc5Mn0.x8dPST_iOah2_5aT7ZuitZWbm0q-dOuBjsrQ8N4_VJI",
       },
     };
 
@@ -42,30 +41,6 @@ export const getExperiencesAction = prop => {
         const dataExperiences = await resp.json();
         console.log(dataExperiences);
         dispatch({ type: ADD_EXPERIENCES, payload: dataExperiences });
-      } else {
-        alert("Errore qualcosa è andato storto");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-};
-export const getPostsAction = () => {
-  return async dispatch => {
-    const endpoint = `https://striveschool-api.herokuapp.com/api/posts/`;
-    const fetchOpt = {
-      headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYjVhNWZjYTEyOTAwMTQ0MGMxMzkiLCJpYXQiOjE2ODE4MzEzMzMsImV4cCI6MTY4MzA0MDkzM30.pvZfvfFjc_HrXl2dCYImrEJra1UTSglnrOIwLpsuPnk",
-      },
-    };
-
-    try {
-      const resp = await fetch(endpoint, fetchOpt);
-      if (resp.ok) {
-        const dataPosts = await resp.json();
-        console.log(dataPosts);
-        dispatch({ type: ADD_POSTS, payload: dataPosts });
       } else {
         alert("Errore qualcosa è andato storto");
       }

@@ -1,8 +1,6 @@
 import { Card, Button, Row, Col, Image } from "react-bootstrap";
 import sidebarImg from "../assets/image/sidebar.png";
 import logo from "../assets/icons/Logo-nav.svg";
-import { IoIosHelpCircle } from "react-icons/io";
-import { HiUserAdd } from "react-icons/hi";
 
 function Sidebar() {
   return (
@@ -35,7 +33,7 @@ function Sidebar() {
               <h5>Simone Sensini</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
-                <HiUserAdd /> Collegati
+                Collegati
               </Button>
             </Col>
 
@@ -48,21 +46,7 @@ function Sidebar() {
               <h5>Salvatore Mercurio</h5>
               <p>Junior Full-Stack-Developer</p>
               <Button className="mb-3" variant="outline-secondary  ">
-                <HiUserAdd /> Collegati
-              </Button>
-            </Col>
-            <Button variant="outline-secondary" className=" fw-bold mt-3 mb-3">
-              Viasualizza altro
-            </Button>
-
-            <Col md={3} className="mt-3">
-              <Image src="https://via.placeholder.com/50x50.png?text=Placeholder" roundedCircle />
-            </Col>
-            <Col md={9}>
-              <h5>Giuseppe Canzoneri</h5>
-              <p>Junior Full-Stack-Developer</p>
-              <Button className="mb-3" variant="outline-secondary  ">
-                <HiUserAdd /> Collegati
+                Collegati
               </Button>
             </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3">
@@ -81,20 +65,20 @@ function Sidebar() {
           </Card.Text>
           <Card.Text className="text-dark "> Aggiungi Nuove competenze con questi corsi, gratuiti per 24 ore</Card.Text>
           <Row>
-            <Col md={4}>
+            <Col md={3}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={8}>
+            <Col md={9}>
               <h5>Fondamenti di programmazione...</h5>
             </Col>
           </Row>
           <hr />
 
           <Row>
-            <Col md={4}>
+            <Col md={3}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={8}>
+            <Col md={9}>
               <h5>Impara Python</h5>
             </Col>
           </Row>
@@ -102,10 +86,10 @@ function Sidebar() {
           <hr />
 
           <Row>
-            <Col md={4}>
+            <Col md={3}>
               <Image src="https://via.placeholder.com/70x70.png?text=Placeholder" />
             </Col>
-            <Col md={8}>
+            <Col md={9}>
               <h5>Python per non programmatori</h5>
             </Col>
             <Button variant="outline-secondary" className=" fw-bold mt-3">
