@@ -15,11 +15,11 @@ const WritePost = () => {
         <AddPostModal handleClose={handleClose} show={show} />
         {profile && (
           <img
-            className="border border-dark border-2 me-4 rounded-circle "
+            className="border border-dark border-2 mx-4 rounded-circle "
             src={profile.image}
             alt="avatar"
             width={100}
-            height={70}
+            height={100}
           />
         )}
         <Button
