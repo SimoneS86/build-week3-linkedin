@@ -39,11 +39,8 @@ const JobExperiences = () => {
     }
  
     useEffect(() => {
-      if (params.userId) {
-        dispatch(getExperiencesAction(params.userId));
-      } else {
         dispatch(getExperiencesAction(experiences.user));
-      }
+      
     }, []);
 
   const handleChange = (propertyName, propertyValue) => {
