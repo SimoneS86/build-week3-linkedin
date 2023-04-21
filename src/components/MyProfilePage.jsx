@@ -1,12 +1,17 @@
 import { Card, Button, Row, Col, Container, Alert } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
 import Sidebar from "./SideBar";
 import JobExperiences from "./JobExperiences";
 import { useParams } from "react-router-dom";
+import UploadImage from "./UploadImage";
 
 const MyProfilePage = () => {
+  const [showImg, setShowImg] = useState(false);
+  const handleCloseImg = () => setShowImg(false);
+  const handleShowImg = () => setShowImg(true);
+
   const profile = useSelector(state => state.profile.content);
   const dispatch = useDispatch();
   const params = useParams();
@@ -25,6 +30,13 @@ const MyProfilePage = () => {
         <Row>
           <Col md={8}>
             <Card className="mt-3 bg-white text-dark position-relative border-3 mb-3">
+              <UploadImage
+                handleCloseImg={handleCloseImg}
+                showImg={showImg}
+                endpoint={`https://striveschool-api.herokuapp.com/api/profile/${profile._id}/picture`}
+                data={"profile"}
+                username={profile.username}
+              />
               <Button
                 style={{ right: "10px", top: "10px" }}
                 variant="outline-secondary border-0 py-1 px-2  position-absolute"
@@ -44,6 +56,7 @@ const MyProfilePage = () => {
                 <Button
                   style={{ right: "10px", top: "0px" }}
                   variant="outline-secondary border-0 py-2 position-absolute"
+                  onClick={handleShowImg}
                 >
                   Modifica
                 </Button>
