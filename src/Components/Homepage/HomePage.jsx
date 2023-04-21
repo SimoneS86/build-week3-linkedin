@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Sidebar from "../SideBar";
+import SideBar from "../SideBar";
 import WritePost from "./WritePost";
 import premium from "../../assets/icons/Premium.svg";
 import items from "../../assets/icons/items.svg";
@@ -81,7 +81,7 @@ const HomePage = () => {
             {/* <PostsDisplay /> */}
           </Col>
           <Col xs={3}>
-            <Sidebar />
+            <SideBar />
           </Col>
         </Row>
       </Container>

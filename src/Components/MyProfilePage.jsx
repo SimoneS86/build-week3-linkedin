@@ -2,7 +2,7 @@ import { Card, Button, Row, Col, Container, Alert } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileAction } from "../redux/actions";
-import Sidebar from "./SideBar";
+import SideBar from "./SideBar";
 import JobExperiences from "./JobExperiences";
 import { useParams } from "react-router-dom";
 import UploadImage from "./UploadImage";
@@ -112,10 +112,10 @@ const MyProfilePage = () => {
                 <Card.Text className="mb-0">{profile.bio}</Card.Text>
               </Card.Body>
             </Card>
-            <JobExperiences prop="643d132022a6ab00141a8567" />
+            <JobExperiences prop="643d01c1186a8700143867c7" />
           </Col>
           <Col md={4}>
-            <Sidebar />
+            <SideBar />
           </Col>
         </Row>
       </Container>

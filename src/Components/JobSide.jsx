@@ -28,4 +28,8 @@ function JobSide() {
   );
 }
 
+<<<<<<< HEAD:src/components/JobSide.jsx
 export default JobSide;
+=======
+export default JobSide;
+>>>>>>> origin/Salvatore:src/Components/JobSide.jsx

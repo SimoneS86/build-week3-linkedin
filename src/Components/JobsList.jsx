@@ -50,4 +50,8 @@ const JobsList = () => {
     </Card>
   );
 };
+<<<<<<< HEAD:src/components/JobsList.jsx
 export default JobsList;
+=======
+export default JobsList;
+>>>>>>> origin/Salvatore:src/Components/JobsList.jsx
