@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import {getExperiencesAction} from "../redux/actions"
 import { useParams } from "react-router-dom";
+import { removeFromExperiencesAction } from "../redux/actions";
 
-const JobExperiences = () => {
+const JobExperiences = (prop) => {
     const experiences = useSelector((state) => state.experiences.content)
     const dispatch = useDispatch();
     const params = useParams();
@@ -20,7 +21,7 @@ const JobExperiences = () => {
       area: ""
     });
 
-    const endpoint = `https://striveschool-api.herokuapp.com/api/profile/`+ params.userId +`/experiences`;
+    const endpoint = 'https://striveschool-api.herokuapp.com/api/profile/643d01c1186a8700143867c7' + prop.prop +'/experiences/';
 
     const openNewModal = () => {
       setShowNewModal(true)
@@ -39,7 +40,7 @@ const JobExperiences = () => {
     }
  
     useEffect(() => {
-        dispatch(getExperiencesAction(experiences.user));
+        dispatch(getExperiencesAction(prop));
       
     }, []);
 
@@ -86,7 +87,7 @@ const JobExperiences = () => {
     e.preventDefault();
 
     try {
-      const resp = await fetch(`https://striveschool-api.herokuapp.com/api/profile/` + params.userId + `/experiences/${newExperience.id}`, {
+      const resp = await fetch("https://striveschool-api.herokuapp.com/api/profile/643d01c1186a8700143867c7/experiences/" + newExperience._id, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -214,9 +215,6 @@ const JobExperiences = () => {
             </li>
         </ul>
         <hr className='border border-dark'/>
-      </Card.Body>
-      )
-      )}
       <Modal show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
           <Modal.Title>Aggiungi esperienza</Modal.Title>
@@ -267,9 +265,13 @@ const JobExperiences = () => {
               <Form.Text></Form.Text>
             </Form.Group>
           <Button variant="primary" type='submit' onClick={closeModal}>Modify experience</Button>
+          <Button variant="primary" onClick={() =>{ closeModal(); dispatch(removeFromExperiencesAction(newExperience._id))}}>Remove experience</Button>
           </Form>
         </Modal.Body>
       </Modal>
+      </Card.Body>
+      )
+      )}
     </Card>
     
     </Container>

@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<MyProfilePage />} />
           <Route path="/profile/:userId" element={<MyProfilePage />} />
           <Route path="/jobs" element={<Jobs />} />
-          <Route path="/profile/:userId/experiences" element={<JobExperiences />} />
+          <Route path="/profile/:userId/experiences" element={<JobExperiences prop="643d01c1186a8700143867c7" />} />
         </Routes>
         <LinkedinFooter />
       </BrowserRouter>
