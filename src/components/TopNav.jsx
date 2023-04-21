@@ -39,7 +39,7 @@ const TopNav = () => {
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
-                    <Link to="/" className="text-dark text-decoration-none">
+                    <Link to="/home" className="text-dark text-decoration-none">
                       Home
                     </Link>
                   </div>
@@ -95,7 +95,7 @@ const TopNav = () => {
                       href="#action/3.1.2"
                       className="dropdown-secondary-action d-flex justify-content-center mt-2 mb-2"
                     >
-                      <Link to="/" className="btn nav-view-profile-btn ">
+                      <Link to="/profile/:userId" className="btn nav-view-profile-btn ">
                         View Profile
                       </Link>
                     </div>

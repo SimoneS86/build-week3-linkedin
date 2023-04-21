@@ -58,7 +58,7 @@ const MyProfilePage = () => {
                   variant="outline-secondary border-0 py-2 position-absolute"
                   onClick={handleShowImg}
                 >
-                  Modifica
+                  Modifica Immagine
                 </Button>
                 <Card.Title className="fs-4 mb-0">
                   {profile.name}&nbsp;{profile.surname}
