@@ -39,7 +39,7 @@ const TopNav = () => {
                     <div>
                       <img src={home} alt="" className="nav-menu-icon" />
                     </div>
-                    <Link to="/" className="text-dark text-decoration-none">
+                    <Link to="/home" className="text-dark text-decoration-none">
                       Home
                     </Link>
                   </div>
