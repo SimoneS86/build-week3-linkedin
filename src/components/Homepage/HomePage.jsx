@@ -34,7 +34,7 @@ const HomePage = () => {
                   </div>
                   <div className="profile-text-mini collapse-hide mt-1 align-items-start pl-2">
                     <p className="username-mini  fw-bold ms-2 ">Fatti assumere più velocemente</p>
-                    <p className="user-role-mini  fw-bold d-flex align-items-center mt-3 ">
+                    <p className="user-role-mini  fw-bold d-flex align-items-center mt-0 ">
                       <img src={premium} alt="" style={{ width: "20px" }} /> Upgrade your plan
                     </p>
                   </div>

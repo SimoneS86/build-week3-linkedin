@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import MyProfilePage from "./Components/MyProfilePage";
-import LinkedinFooter from "./Components/LinkedinFooter";
-import TopNav from "./Components/TopNav";
-import JobExperiences from "./Components/JobExperiences";
-import HomePage from "./Components/Homepage/HomePage";
-import Jobs from "./Components/Job";
+import MyProfilePage from "./components/MyProfilePage";
+import LinkedinFooter from "./components/LinkedinFooter";
+import TopNav from "./components/TopNav";
+import JobExperiences from "./components/JobExperiences";
+import HomePage from "./components/Homepage/HomePage";
+import Jobs from "./components/Job";
 
 function App() {
   return (

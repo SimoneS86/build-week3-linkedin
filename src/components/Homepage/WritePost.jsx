@@ -18,7 +18,7 @@ const WritePost = () => {
             className="border border-dark border-2 me-4 rounded-circle "
             src={profile.image}
             alt="avatar"
-            width={100}
+            width={80}
             height={70}
           />
         )}
