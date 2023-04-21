@@ -109,10 +109,10 @@ const JobExperiences = (prop) => {
   };
 
   return (
-    <Container>
+    <Container classname="px-0">
     <Card>
       <div className="d-flex justify-content-between">
-        <Card.Title><Link to="/profile/:userId/experiences">Esperienza</Link></Card.Title>
+        <Card.Title className="mt-3"><Link className="text-dark ms-3 text-decoration-none" to="/profile/:userId/experiences">Esperienza</Link></Card.Title>
         <div>
           <button className='border border-0' onClick={openNewModal}>
             <svg
