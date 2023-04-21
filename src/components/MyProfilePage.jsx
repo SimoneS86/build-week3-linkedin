@@ -6,6 +6,7 @@ import Sidebar from "./SideBar";
 import JobExperiences from "./JobExperiences";
 import { useParams } from "react-router-dom";
 import UploadImage from "./UploadImage";
+import { BiPencil } from "react-icons/bi";
 
 const MyProfilePage = () => {
   const [showImg, setShowImg] = useState(false);
@@ -58,7 +59,7 @@ const MyProfilePage = () => {
                   variant="outline-secondary border-0 py-2 position-absolute"
                   onClick={handleShowImg}
                 >
-                  Modifica
+                  <BiPencil className="fs-4" />
                 </Button>
                 <Card.Title className="fs-4 mb-0">
                   {profile.name}&nbsp;{profile.surname}
